@@ -6,6 +6,7 @@ import { HashRouter as Router, Route } from 'react-router-dom';
 import Header from '../Header/Header.jsx';
 import FeelingPage1 from '../FeelingPage1/FeelingPage1.jsx'
 import UnderstandingPage2 from '../UnderstandingPage2/UnderstandingPage2.jsx'
+import SupportPage3 from '../SupportPage3/SupportPage3.jsx';
 
 function App() {
 
@@ -34,6 +35,10 @@ function App() {
 
         <Route path='/page2' exact>
           <UnderstandingPage2 feedbackObject={feedbackObject} />
+        </Route>
+
+        <Route path='/page3' exact>
+          <SupportPage3 feedbackObject={feedbackObject} />
         </Route>
 
       </Router>

@@ -1,9 +1,16 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 function Understanding({ feedbackObject }) {
 
     const dispatch = useDispatch();
+    const history = useHistory();
+
+    const sendToPage3 = () => {
+        history.push('/page3');
+    }
+
 
     let [understanding, setUnderstanding] = useState('');
 
@@ -13,7 +20,7 @@ function Understanding({ feedbackObject }) {
             feedbackObject.understanding = understanding;
             console.log('feedbackObject is now:', feedbackObject);
             dispatch({ type: 'ADD_UNDERSTANDING', payload: understanding })
-            clearUnderstanding();
+            sendToPage3();
         }
         else {
             alert("You must enter a value between 1 and 10")
@@ -34,7 +41,6 @@ function Understanding({ feedbackObject }) {
                     type="number"
                     placeholder='1 - 10'
                 /> 
-                <h1>{understanding}</h1>
                 
                 <button type="submit">Next</button>
             </form>

@@ -2,50 +2,49 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
-function Feeling({ feedbackObject }) {
+function Support({ feedbackObject }) {
 
     const dispatch = useDispatch();
+
+    let [support, setSupport] = useState('');
     const history = useHistory();
 
     const sendToPage2 = () => {
         history.push('/page2');
     }
 
-    let [feeling, setFeeling] = useState('')
-
-    const submitFeeling = (event) => {
+    const submitSupport = (event) => {
         event.preventDefault();
-        if (1 <= feeling && 10 >= feeling) {
-            feedbackObject.feeling = feeling;
+        if (1 <= support && 10 >= support) {
+            feedbackObject.support = support;
             console.log('feedbackObject is now:', feedbackObject);
-            dispatch({ type: 'ADD_FEELING', payload: feeling })
-            sendToPage2();
-            // clearFeeling();
+            dispatch({ type: 'ADD_SUPPORT', payload: support })
+            clearSupport();
         }
         else {
             alert("You must enter a value between 1 and 10")
-            clearFeeling();
+            clearSupport();
             return;
         }
     }
-    const clearFeeling = () => {
-        setFeeling('');
+    const clearSupport = () => {
+        setSupport('');
     }
 
     return (
         <div>
-            <h1>PAGE 1 - How are you feeling today?</h1>
-            <form onSubmit={submitFeeling}>
-                <input onChange={(event) => setFeeling(event.target.value)}
-                    value={feeling}
+            <h1>PAGE 3 - How well are you being supported?</h1>
+            <form onSubmit={submitSupport}>
+                <input onChange={(event) => setSupport(event.target.value)}
+                    value={support}
                     type="number"
                     placeholder='1 - 10'
-                />
+                /> 
+                
                 <button type="submit">Next</button>
             </form>
         </div>
     )
-
 }
 
-export default Feeling;
+export default Support;
