@@ -18,33 +18,35 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 [x] - import crap into app.jsx
 [x] - logger setup
 
-[] - PAGE 0 - Home (App.jsx)
-    [] - "Survey time! Ready?" BUTTON
-
-[] - PAGE 1 - Feeling.jsx
-    [] - function, functionality
-    [] - input 1-10 feels
-    [] - next button
+[x] - PAGE 1 - Feeling.jsx
+    [x] - function, functionality
+    [x] - input 1-10 feels
+    [x] - next button
+    [] - set up route '/'
 
 [] - PAGE 2 - Understanding.jsx
     [] - function, functionality
     [] - input 1-10 feels
     [] - next button
+    [] - set up route '/understanding'
 
 [] - PAGE 3 - Support.jsx
     [] - function, functionality
     [] - input 1-10 feels
     [] - next button
+    [] - set up route '/support'
 
 [] - PAGE 4 - Comments.jsx
     [] - function, functionality
     [] - big input for paragraph
     [] - next button
+    [] - set up route '/comments'
 
 [] - PAGE 5 - Confirm page
     [] - function, functionality
     [] - show answers
     [] - confirm button
+    [] - set up route '/confirm(or finalize or whatever)'
         [] - navs to thanks page
         [] - submits responses to database
 

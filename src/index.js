@@ -9,8 +9,8 @@ import logger from 'redux-logger';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 
 
-//TODO FEELING P1 REDUCER
 
+//feeling reducer
 const feelingReducer = (state = '', action) => {
     if (action.type === "ADD_FEELING") {
         return [action.payload, ...state]
@@ -18,8 +18,16 @@ const feelingReducer = (state = '', action) => {
     return state;
 }
 
+//understanding reducer
+const understandingReducer = (state = '', action) => {
+    if (action.type === "ADD_UNDERSTANDING") {
+        return [action.payload, ...state]
+    }
+    return state;
+}
 
-//TODO UNDERSTANDING P2 REDUCER
+
+
 
 
 
@@ -36,6 +44,7 @@ const storeInstance = createStore(
     combineReducers(
         {
             feelingReducer,
+            understandingReducer,
         }
     ),
     applyMiddleware(logger)
