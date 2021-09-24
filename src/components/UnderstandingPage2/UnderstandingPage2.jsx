@@ -31,10 +31,12 @@ function Understanding({ feedbackObject }) {
             <form onSubmit={submitUnderstanding}>
                 <input onChange={(event) => setUnderstanding(event.target.value)}
                     value={understanding}
-                    type='number'
+                    type="number"
                     placeholder='1 - 10'
-                />
-                <button type="submit">Submit</button>
+                /> 
+                <h1>{understanding}</h1>
+                
+                <button type="submit">Next</button>
             </form>
         </div>
     )

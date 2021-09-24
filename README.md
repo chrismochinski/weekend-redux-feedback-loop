@@ -24,10 +24,10 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
     [x] - next button
     [] - set up route '/'
 
-[] - PAGE 2 - Understanding.jsx
-    [] - function, functionality
-    [] - input 1-10 feels
-    [] - next button
+[x] - PAGE 2 - Understanding.jsx
+    [x] - function, functionality
+    [x] - input 1-10 feels
+    [x] - next button
     [] - set up route '/understanding'
 
 [] - PAGE 3 - Support.jsx

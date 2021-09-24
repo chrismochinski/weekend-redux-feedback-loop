@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 function Feeling({feedbackObject}) {
 
     const dispatch = useDispatch();
+    const history = useHistory();
+
+    const sendToPage2 = () => {
+        history.push('/page2');
+    }
 
     let [feeling, setFeeling] = useState('')
 
@@ -13,7 +19,8 @@ function Feeling({feedbackObject}) {
             feedbackObject.feeling = feeling;
             console.log('feedbackObject is now:', feedbackObject);
             dispatch({ type: 'ADD_FEELING', payload: feeling })
-            clearFeeling();
+            sendToPage2();
+            // clearFeeling();
         }
         else {
             alert("You must enter a value between 1 and 10")
@@ -31,10 +38,10 @@ function Feeling({feedbackObject}) {
             <form onSubmit={submitFeeling}>
                 <input onChange={(event) => setFeeling(event.target.value)}
                     value={feeling}
-                    type='number'
+                    type="number"
                     placeholder='1 - 10'
                 />
-                <button type="submit">Submit</button>
+                <button type="submit">Next</button>
             </form>
         </div>
     )
