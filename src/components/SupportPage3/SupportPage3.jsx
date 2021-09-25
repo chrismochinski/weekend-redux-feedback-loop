@@ -5,13 +5,13 @@ import { useHistory } from 'react-router-dom';
 function Support({ feedbackObject }) {
 
     const dispatch = useDispatch();
-
-    let [support, setSupport] = useState('');
     const history = useHistory();
 
-    const sendToPage2 = () => {
-        history.push('/page2');
-    }
+    const sendToPage4 = () => {
+        history.push('/page4');
+    }   //fix check!!
+
+    let [support, setSupport] = useState('');
 
     const submitSupport = (event) => {
         event.preventDefault();
@@ -19,7 +19,7 @@ function Support({ feedbackObject }) {
             feedbackObject.support = support;
             console.log('feedbackObject is now:', feedbackObject);
             dispatch({ type: 'ADD_SUPPORT', payload: support })
-            clearSupport();
+            sendToPage4();
         }
         else {
             alert("You must enter a value between 1 and 10")

@@ -34,7 +34,7 @@ function Feeling({ feedbackObject }) {
 
     return (
         <div>
-            <h1>PAGE 1 - How are you feeling today?</h1>
+            <h1>How are you feeling today?</h1>
             <form onSubmit={submitFeeling}>
                 <input onChange={(event) => setFeeling(event.target.value)}
                     value={feeling}

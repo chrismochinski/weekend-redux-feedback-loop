@@ -7,6 +7,7 @@ import Header from '../Header/Header.jsx';
 import FeelingPage1 from '../FeelingPage1/FeelingPage1.jsx'
 import UnderstandingPage2 from '../UnderstandingPage2/UnderstandingPage2.jsx'
 import SupportPage3 from '../SupportPage3/SupportPage3.jsx';
+import CommentsPage4 from '../CommentsPage4/CommentsPage4.jsx'
 
 function App() {
 
@@ -28,7 +29,6 @@ function App() {
 
         <Header />
 
-
         <Route path='/' exact>
           <FeelingPage1 feedbackObject={feedbackObject} />
         </Route>
@@ -39,6 +39,10 @@ function App() {
 
         <Route path='/page3' exact>
           <SupportPage3 feedbackObject={feedbackObject} />
+        </Route>
+
+        <Route path='/page4' exact>
+          <CommentsPage4 feedbackObject={feedbackObject} />
         </Route>
 
       </Router>

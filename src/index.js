@@ -8,7 +8,12 @@ import logger from 'redux-logger';
 
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 
-
+// let defaultStore = {
+//     feeling: '',
+//     understanding: '',
+//     support: '',
+//     comments: ''
+// }
 
 //feeling reducer
 const feelingReducer = (state = '', action) => {
@@ -26,17 +31,21 @@ const understandingReducer = (state = '', action) => {
     return state;
 }
 
+//support reducer
+const supportReducer = (state = '', action) => {
+    if (action.type === "ADD_SUPPORT") {
+        return [action.payload, ...state]
+    }
+    return state;
+}
 
-
-
-
-
-//TODO SUPPORT P3 REDUCER
-
-
-
-//TODO COMMENTS P4 REDUCER 
-
+//comments reducer
+const commentsReducer = (state = '', action) => {
+    if (action.type === "ADD_COMMENTS") {
+        return [action.payload, ...state]
+    }
+    return state;
+}
 
 
 
@@ -45,6 +54,8 @@ const storeInstance = createStore(
         {
             feelingReducer,
             understandingReducer,
+            supportReducer,
+            commentsReducer
         }
     ),
     applyMiddleware(logger)
