@@ -9,7 +9,7 @@ function Support({ feedbackObject }) {
 
     const sendToPage4 = () => {
         history.push('/page4');
-    }   //fix check!!
+    }   
 
     let [support, setSupport] = useState('');
 

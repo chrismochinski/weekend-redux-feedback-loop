@@ -8,6 +8,7 @@ import FeelingPage1 from '../FeelingPage1/FeelingPage1.jsx'
 import UnderstandingPage2 from '../UnderstandingPage2/UnderstandingPage2.jsx'
 import SupportPage3 from '../SupportPage3/SupportPage3.jsx';
 import CommentsPage4 from '../CommentsPage4/CommentsPage4.jsx'
+import ReviewPage5 from '../ReviewPage5/ReviewPage5.jsx'
 
 function App() {
 
@@ -45,6 +46,9 @@ function App() {
           <CommentsPage4 feedbackObject={feedbackObject} />
         </Route>
 
+        <Route path='/page5' exact>
+          <ReviewPage5 feedbackObject={feedbackObject} />
+        </Route>
       </Router>
 
     </div>

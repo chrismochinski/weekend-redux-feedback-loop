@@ -8,54 +8,35 @@ import logger from 'redux-logger';
 
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 
-// let defaultStore = {
-//     feeling: '',
-//     understanding: '',
-//     support: '',
-//     comments: ''
-// }
+let defaultStore = {
+    feeling: '',
+    understanding: '',
+    support: '',
+    comments: '',
+}
 
-//feeling reducer
-const feelingReducer = (state = '', action) => {
+// single master reducer
+const masterReducer = (state = defaultStore, action) => {
     if (action.type === "ADD_FEELING") {
-        return [action.payload, ...state]
+        return {...state, feeling: action.payload };
+    }
+    else if (action.type === "ADD_UNDERSTANDING") {
+        return {...state, understanding: action.payload };
+    }
+    else if (action.type === "ADD_SUPPORT") {
+        return {...state, support: action.payload };
+    }
+    else if (action.type === "ADD_COMMENTS") {
+        return {...state, comments: action.payload };
     }
     return state;
 }
-
-//understanding reducer
-const understandingReducer = (state = '', action) => {
-    if (action.type === "ADD_UNDERSTANDING") {
-        return [action.payload, ...state]
-    }
-    return state;
-}
-
-//support reducer
-const supportReducer = (state = '', action) => {
-    if (action.type === "ADD_SUPPORT") {
-        return [action.payload, ...state]
-    }
-    return state;
-}
-
-//comments reducer
-const commentsReducer = (state = '', action) => {
-    if (action.type === "ADD_COMMENTS") {
-        return [action.payload, ...state]
-    }
-    return state;
-}
-
 
 
 const storeInstance = createStore(
     combineReducers(
         {
-            feelingReducer,
-            understandingReducer,
-            supportReducer,
-            commentsReducer
+            masterReducer
         }
     ),
     applyMiddleware(logger)

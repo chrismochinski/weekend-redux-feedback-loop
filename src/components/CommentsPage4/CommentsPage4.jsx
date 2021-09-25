@@ -19,10 +19,8 @@ function Comments({ feedbackObject }) {
         event.preventDefault();
         feedbackObject.comments = comments;
         console.log('feedbackObject is now:', feedbackObject);
-        dispatch({ type: 'ADD_COMMENTS', payload: comments })
-        console.log('reduxStore is now:', reduxStore)
+        dispatch({ type: 'ADD_COMMENTS', payload: comments });
         sendToPage5();
-
     }
     
 
@@ -31,9 +29,8 @@ function Comments({ feedbackObject }) {
             <h1>PAGE 4 - Any comments you want to leave?</h1>
             <form onSubmit={submitComments}>
                 <input onChange={(event) => setComments(event.target.value)}
-                    value={comments}
                     type="text"
-                    placeholder='1 - 10'
+                    placeholder='Thoughts?'
                 />
 
                 <button type="submit">Next</button>
