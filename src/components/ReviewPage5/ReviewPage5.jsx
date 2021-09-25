@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 function Review() {
 
@@ -12,8 +13,13 @@ function Review() {
 
     const postToDatabase = () => { //conditional to avoid errors - start over if any values missing
         console.log('Info to database:', reduxStore);
-        if (reduxStore.feeling === '' || reduxStore.understanding === '' || reduxStore.support === '' || reduxStore.comments === '') {
-            alert("You are missing info. Let's start over.")
+        if (reduxStore.feeling === '' || reduxStore.understanding === '' || reduxStore.support === '') {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: "You missed a value somewhere!",
+                confirmButtonText: 'Start Over'
+              })
             startOver();
         }
         else {
@@ -22,6 +28,13 @@ function Review() {
                 url: '/feedback',
                 data: reduxStore,
             }).then(response => {
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Feedback Saved!',
+                    showConfirmButton: false,
+                    timer: 1000
+                  })
                 finalPage(); // call function below to send to "thank you" page
             }).catch((error) => {
                 console.log('error in client-side confirm page:', error)

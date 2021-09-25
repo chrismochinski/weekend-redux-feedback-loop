@@ -35,7 +35,7 @@ function Support({ feedbackObject }) {
         <div>
             <h1>PAGE 3 - How well are you being supported?</h1>
             <form onSubmit={submitSupport}>
-                <input onChange={(event) => setSupport(event.target.value)}
+                <input className="numberInput" onChange={(event) => setSupport(event.target.value)}
                     value={support}
                     type="number"
                     placeholder='1 - 10'

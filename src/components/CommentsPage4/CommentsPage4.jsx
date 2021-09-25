@@ -28,7 +28,7 @@ function Comments({ feedbackObject }) {
         <div>
             <h1>PAGE 4 - Any comments you want to leave?</h1>
             <form onSubmit={submitComments}>
-                <input onChange={(event) => setComments(event.target.value)}
+                <input className="textInput" onChange={(event) => setComments(event.target.value)}
                     type="text"
                     placeholder='Thoughts?'
                 />

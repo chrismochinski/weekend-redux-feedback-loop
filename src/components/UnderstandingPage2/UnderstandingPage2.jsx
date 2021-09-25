@@ -36,7 +36,7 @@ function Understanding({ feedbackObject }) {
         <div>
             <h1>PAGE 2 - How well are you understanding the content?</h1>
             <form onSubmit={submitUnderstanding}>
-                <input onChange={(event) => setUnderstanding(event.target.value)}
+                <input className="numberInput" onChange={(event) => setUnderstanding(event.target.value)}
                     value={understanding}
                     type="number"
                     placeholder='1 - 10'

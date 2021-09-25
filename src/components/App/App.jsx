@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import './App.css';
 import { useDispatch } from 'react-redux';
 import { HashRouter as Router, Route } from 'react-router-dom';
@@ -10,6 +10,7 @@ import SupportPage3 from '../SupportPage3/SupportPage3.jsx';
 import CommentsPage4 from '../CommentsPage4/CommentsPage4.jsx'
 import ReviewPage5 from '../ReviewPage5/ReviewPage5.jsx'
 import ThankYouPage6 from '../ThankYouPage6/ThankYouPage6.jsx'
+
 
 function App() {
 
