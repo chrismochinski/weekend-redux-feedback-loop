@@ -9,6 +9,7 @@ import UnderstandingPage2 from '../UnderstandingPage2/UnderstandingPage2.jsx'
 import SupportPage3 from '../SupportPage3/SupportPage3.jsx';
 import CommentsPage4 from '../CommentsPage4/CommentsPage4.jsx'
 import ReviewPage5 from '../ReviewPage5/ReviewPage5.jsx'
+import ThankYouPage6 from '../ThankYouPage6/ThankYouPage6.jsx'
 
 function App() {
 
@@ -49,6 +50,11 @@ function App() {
         <Route path='/page5' exact>
           <ReviewPage5 feedbackObject={feedbackObject} />
         </Route>
+
+        <Route path='/thankyou' exact>
+          <ThankYouPage6 />
+        </Route>
+
       </Router>
 
     </div>

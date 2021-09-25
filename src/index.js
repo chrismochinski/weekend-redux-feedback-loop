@@ -29,6 +29,13 @@ const masterReducer = (state = defaultStore, action) => {
     else if (action.type === "ADD_COMMENTS") {
         return {...state, comments: action.payload };
     }
+    else if (action.type === "CLEAR_STORE") {
+        return {...state, 
+            feeling: '',
+            understanding: '',
+            support: '',
+            comments: '',}
+    }
     return state;
 }
 
