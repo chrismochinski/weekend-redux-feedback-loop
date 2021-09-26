@@ -12,13 +12,12 @@ import ReviewPage5 from '../ReviewPage5/ReviewPage5.jsx'
 import ThankYouPage6 from '../ThankYouPage6/ThankYouPage6.jsx'
 
 
+
 function App() {
 
-  //IDEA master object for DB
 
+  // this feedbackObject is a store backup in the App scope
   let feedbackObject = {};
-
-  //idea this object will compile
 
 
   const dispatch = useDispatch();

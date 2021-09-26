@@ -1,14 +1,17 @@
+import './FeelingPage1.css';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
-function Feeling({ feedbackObject }) {
+import Button from '@mui/material/Button'; 
+import Paper from "@material-ui/core/Paper"; 
 
-  
+
+function Feeling({ feedbackObject }) {
+       
     const dispatch = useDispatch();
     const history = useHistory();
-
     const sendToPage2 = () => {
         history.push('/page2');
     }
@@ -38,8 +41,12 @@ function Feeling({ feedbackObject }) {
         setFeeling('');
     }
 
+    
+
     return (
+        
         <div>
+            <Paper className="page1" elevation={6}>
             <h1>How are you feeling today?</h1>
             <form onSubmit={submitFeeling}>
                 <input className="numberInput" onChange={(event) => setFeeling(event.target.value)}
@@ -47,8 +54,9 @@ function Feeling({ feedbackObject }) {
                     type="number"
                     placeholder='1 - 10'
                 />
-                <button type="submit">Next</button>
+                <Button variant="contained" size="small" color="secondary" type="submit">Next</Button>
             </form>
+            </Paper>
         </div>
     )
 

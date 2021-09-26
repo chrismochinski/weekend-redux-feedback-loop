@@ -1,6 +1,11 @@
+import './SupportPage3.css';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import Swal from 'sweetalert2';
+
+import Button from '@mui/material/Button'; 
+import Paper from "@material-ui/core/Paper"; 
 
 function Support({ feedbackObject }) {
 
@@ -22,7 +27,11 @@ function Support({ feedbackObject }) {
             sendToPage4();
         }
         else {
-            alert("You must enter a value between 1 and 10")
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops!',
+                text: 'Please enter a value between from 1 to 10.',
+              })
             clearSupport();
             return;
         }
@@ -33,6 +42,7 @@ function Support({ feedbackObject }) {
 
     return (
         <div>
+            <Paper className="page3" elevation={6}>
             <h1>PAGE 3 - How well are you being supported?</h1>
             <form onSubmit={submitSupport}>
                 <input className="numberInput" onChange={(event) => setSupport(event.target.value)}
@@ -41,8 +51,9 @@ function Support({ feedbackObject }) {
                     placeholder='1 - 10'
                 /> 
                 
-                <button type="submit">Next</button>
+                <Button variant="contained" size="small" color="secondary" type="submit">Next</Button>
             </form>
+            </Paper>
         </div>
     )
 }

@@ -1,7 +1,11 @@
+import './ReviewPage5.css';
 import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import Swal from 'sweetalert2';
+
+import Button from '@mui/material/Button'; 
+import Paper from "@material-ui/core/Paper"; 
 
 function Review() {
 
@@ -33,7 +37,7 @@ function Review() {
                     icon: 'success',
                     title: 'Feedback Saved!',
                     showConfirmButton: false,
-                    timer: 1000
+                    timer: 1500
                   })
                 finalPage(); // call function below to send to "thank you" page
             }).catch((error) => {
@@ -54,15 +58,16 @@ function Review() {
 
     return (
         <div className="reviewPage">
-            <h1>Review Your Feedback:</h1><br />
+            <Paper className="page5" elevation={6}>
+            <h1>Review Your Feedback:</h1>
 
             <h3>Feeling: {reduxStore.feeling}</h3>
             <h3>Understanding: {reduxStore.understanding}</h3>
             <h3>Support: {reduxStore.support}</h3>
             <h3>Comments: {reduxStore.comments}</h3>
 
-            <button onClick={() => postToDatabase(reduxStore)}>Confirm</button>
-
+            <Button variant="contained" color="secondary" onClick={() => postToDatabase(reduxStore)}>Confirm</Button>
+            </Paper>
         </div>
     )
 

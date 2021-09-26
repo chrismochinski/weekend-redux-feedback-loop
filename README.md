@@ -30,29 +30,29 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
     [x] - next button
     [] - set up route '/understanding'
 
-[] - PAGE 3 - Support.jsx
-    [] - function, functionality
-    [] - input 1-10 feels
-    [] - next button
-    [] - set up route '/support'
+[x] - PAGE 3 - Support.jsx
+    [x] - function, functionality
+    [x] - input 1-10 feels
+    [x] - next button
+    [x] - set up route '/support'
 
-[] - PAGE 4 - Comments.jsx
-    [] - function, functionality
-    [] - big input for paragraph
-    [] - next button
-    [] - set up route '/comments'
+[x] - PAGE 4 - Comments.jsx
+    [x] - function, functionality
+    [x] - big input for paragraph
+    [x] - next button
+    [x] - set up route '/comments'
 
-[] - PAGE 5 - Confirm page
-    [] - function, functionality
-    [] - show answers
-    [] - confirm button
-    [] - set up route '/confirm(or finalize or whatever)'
-        [] - navs to thanks page
-        [] - submits responses to database
+[x] - PAGE 5 - Confirm page
+    [x] - function, functionality
+    [x] - show answers
+    [x] - confirm button
+    [x] - set up route '/confirm(or finalize or whatever)'
+        [x] - navs to thanks page
+        [x] - submits responses to database
 
-[] - PAGE 6 - Thanks!
+[x] - PAGE 6 - Thanks!
     [] - maybe a nice pic/phrase?
-    [] - start over button
+    [x] - start over button
     
-[] - 
-[] - 
+[] - MUI
+[] - kickass readme

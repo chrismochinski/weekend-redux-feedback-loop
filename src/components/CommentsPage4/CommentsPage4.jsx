@@ -1,6 +1,11 @@
+import './CommentsPage4.css';
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import Swal from 'sweetalert2';
+
+import Button from '@mui/material/Button';
+import Paper from "@material-ui/core/Paper";
 
 function Comments({ feedbackObject }) {
 
@@ -22,10 +27,11 @@ function Comments({ feedbackObject }) {
         dispatch({ type: 'ADD_COMMENTS', payload: comments });
         sendToPage5();
     }
-    
+
 
     return (
         <div>
+            <Paper className="page4" elevation={6}>
             <h1>PAGE 4 - Any comments you want to leave?</h1>
             <form onSubmit={submitComments}>
                 <input className="textInput" onChange={(event) => setComments(event.target.value)}
@@ -33,8 +39,9 @@ function Comments({ feedbackObject }) {
                     placeholder='Thoughts?'
                 />
 
-                <button type="submit">Next</button>
+                <Button variant="contained" size="small" color="secondary" type="submit">Next</Button>
             </form>
+            </Paper>
         </div>
     )
 }
