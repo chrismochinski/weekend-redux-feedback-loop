@@ -23,12 +23,26 @@ h4 {
 }
 
 button {
-  margin-left: 5px;
+  background-color: rgb(39, 77, 158);
+  color: white;
 }
 
 .numberInput {
-  width: 60px;
+  width: 100px;
 }
 
 .textInput {
+  width: 250px;
+}
+
+h1 {
+  font-size: 30px;
+  font-family: 'Spartan', sans-serif;
+}
+
+h3 {
+  font-size: 17px;
+  text-decoration-line: underline;
+  font-family: 'Spartan', sans-serif;
+  color: rgba(0, 0, 0, 0.596);
 }

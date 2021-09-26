@@ -1,6 +1,9 @@
+import './ThankYouPage6.css';
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
+import Button from '@mui/material/Button'; 
+import Paper from "@material-ui/core/Paper"; 
 
 function ThankYou() {
 
@@ -20,8 +23,10 @@ function ThankYou() {
     return(
 
         <div>
+            <Paper className="thankYouPage" elevation={6}>
             <h1>Thanks for providing your feedback!</h1>
-            <button onClick={() => clearStore()}>Start Over</button>
+            <Button variant="contained" size="large" color="secondary" onClick={() => clearStore()}>Start Over</Button>
+            </Paper>
         </div>
 
     )

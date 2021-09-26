@@ -33,11 +33,11 @@ function Review() {
                 data: reduxStore,
             }).then(response => {
                 Swal.fire({
-                    position: 'top-end',
+                    position: 'center',
                     icon: 'success',
                     title: 'Feedback Saved!',
                     showConfirmButton: false,
-                    timer: 1500
+                    timer: 1800
                   })
                 finalPage(); // call function below to send to "thank you" page
             }).catch((error) => {

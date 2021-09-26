@@ -6,16 +6,22 @@ import Swal from 'sweetalert2';
 
 import Button from '@mui/material/Button';
 import Paper from "@material-ui/core/Paper";
+import TextField from "@material-ui/core/TextField";
+import { BsFillCaretRightFill, BsFillCaretLeftFill } from "react-icons/bs";
+
 
 function Understanding({ feedbackObject }) {
 
     const dispatch = useDispatch();
     const history = useHistory();
 
-    const sendToPage3 = () => {
+    const sendToPage3 = () => { //advances one page
         history.push('/page3');
     }
 
+    const goBack = () => { //function goes back one page
+        history.push('/');
+    }
 
     let [understanding, setUnderstanding] = useState('');
 
@@ -32,7 +38,7 @@ function Understanding({ feedbackObject }) {
                 icon: 'error',
                 title: 'Oops!',
                 text: 'Please enter a value between from 1 to 10.',
-              })
+            })
             clearUnderstanding();
             return;
         }
@@ -44,15 +50,21 @@ function Understanding({ feedbackObject }) {
     return (
         <div>
             <Paper className="page2" elevation={6}>
-                <h1>PAGE 2 - How well are you understanding the content?</h1>
+                <h3>Page 2</h3>
+                <h1>How well are you understanding the content?</h1>
                 <form onSubmit={submitUnderstanding}>
-                    <input className="numberInput" onChange={(event) => setUnderstanding(event.target.value)}
+                    <TextField className="numberInput" onChange={(event) => setUnderstanding(event.target.value)}
                         value={understanding}
                         type="number"
-                        placeholder='1 - 10'
+                        label='1 - 10'
                     />
-
-                    <Button variant="contained" size="small" color="secondary" type="submit">Next</Button>
+                    <div className="nextButton">
+                        <Button variant="contained" size="small" color="secondary" type="submit">Next<BsFillCaretRightFill /></Button>
+                    </div>
+                    <div className="prevButton">
+                        <Button className="prevButton" variant="contained" size="small" color="secondary" onClick={() => goBack()}><BsFillCaretLeftFill />Prev</Button>
+                    </div>
+                   
                 </form>
             </Paper>
         </div>
