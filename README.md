@@ -1,7 +1,6 @@
 # <b>Weekend Redux Feedback Loop ➰  </b><p> 
 
 ## <b><span style="color:#F0ED86">Allows a user to report their daily prime feedback</b>
-<br />
 
 ---
 
