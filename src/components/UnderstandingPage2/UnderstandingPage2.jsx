@@ -8,6 +8,7 @@ import Button from '@mui/material/Button';
 import Paper from "@material-ui/core/Paper";
 import TextField from "@material-ui/core/TextField";
 import { BsFillCaretRightFill, BsFillCaretLeftFill } from "react-icons/bs";
+import { animated, useSpring } from "react-spring"; 
 
 
 function Understanding({ feedbackObject }) {
@@ -47,11 +48,22 @@ function Understanding({ feedbackObject }) {
         setUnderstanding('');
     }
 
+    const props = useSpring({
+        opacity: 1,
+        transform: "translate(0px, 0px)",
+        from: { opacity: 0, transform: "translate(-35px, 8px)" },
+      }); 
+
+
     return (
+
+        <animated.div style={props}>
         <div>
             <Paper className="page2" elevation={6}>
                 <h3>Page 2</h3>
                 <h1>How well are you understanding the content?</h1>
+                <br />
+
                 <form onSubmit={submitUnderstanding}>
                     <TextField className="numberInput" onChange={(event) => setUnderstanding(event.target.value)}
                         value={understanding}
@@ -68,6 +80,8 @@ function Understanding({ feedbackObject }) {
                 </form>
             </Paper>
         </div>
+        </animated.div>
+
     )
 }
 
