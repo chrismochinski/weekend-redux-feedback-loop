@@ -76,7 +76,7 @@ function Review() {
                         <h5>Feeling: <b>{reduxStore.feeling}</b></h5>
                         <h5>Understanding: <b>{reduxStore.understanding}</b></h5>
                         <h5>Support: <b>{reduxStore.support}</b></h5>
-                        <h5>Comments: <b>{reduxStore.comments}</b></h5>
+                        <h5 id="reviewPageComments">Comments: <b>{reduxStore.comments}</b></h5>
                     </div>
 
                     <div className="nextButton">

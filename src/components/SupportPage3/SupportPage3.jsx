@@ -38,6 +38,7 @@ function Support({ feedbackObject }) {
             Swal.fire({
                 icon: 'error',
                 title: 'Oops!',
+                text: 'Please enter a value between from 1 to 10.',
                 from: { opacity: 0, transform: "translate(-35px, 8px)" },
             })
             clearSupport();
