@@ -11,7 +11,7 @@
 
 
 ---
-<img src="./README-visuals/feedbackLoopChart.png" width="500px" style="float: left; margin-right: 10px"> <br /><br />_(this image represents the original, conceptual flow chart showing the path of information from the user's input to the Redux store as well as a backup object on the client side, both of which are used for temporary storage - the database is only utilized on user confirmation)_
+<img src="./README-visuals/feedbackLoopChart.png" width="570px" style="float: left; margin-right: 10px"> <br /><br />_(this image represents the original, conceptual flow chart showing the path of information from the user's input to the Redux store as well as a backup object on the client side, both of which are used for temporary storage - the database is only utilized on user confirmation)_
 
 <br />
 
