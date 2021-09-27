@@ -19,10 +19,9 @@ router.post('/', (req, res) => {
         });
 });
 
-// get user feedback from database - server/router sice
-router.get('/' (req, res) => {
-    res.send(feedback)
-})
+router.get('/', (req, res) => {
+    res.send(pool);
+});
 
 
 module.exports = router;
