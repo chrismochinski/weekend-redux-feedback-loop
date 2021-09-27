@@ -40,7 +40,7 @@ function Review() {
                     icon: 'success',
                     title: 'Feedback Saved!',
                     showConfirmButton: false,
-                    timer: 1800
+                    timer: 1200
                 })
                 finalPage(); // call function below to send to "thank you" page
             }).catch((error) => {
@@ -65,6 +65,7 @@ function Review() {
         opacity: 1,
         transform: "translate(0px, 0px)",
         from: { opacity: 0, transform: "translate(-30px, 30px)" },
+        config: {duration: 800}
     });
 
     return (

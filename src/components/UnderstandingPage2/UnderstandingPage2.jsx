@@ -49,6 +49,7 @@ function Understanding({ feedbackObject }) {
     }
 
     const props = useSpring({
+        config: {duration: 500},
         opacity: 1,
         transform: "translate(0px, 0px)",
         from: { opacity: 0, transform: "translate(-35px, 8px)" },

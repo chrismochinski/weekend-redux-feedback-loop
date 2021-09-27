@@ -50,6 +50,7 @@ function Support({ feedbackObject }) {
     }
 
     const props = useSpring({
+        config: {duration: 500},
         opacity: 1,
         transform: "translate(0px, 0px)",
         from: { opacity: 0, transform: "translate(-30px, 30px)" },
@@ -70,7 +71,14 @@ function Support({ feedbackObject }) {
                             label='1 - 10'
                         />
                         <div className="nextButton">
-                            <Button variant="contained" size="small" color="secondary" type="submit">Next<BsFillCaretRightFill /></Button>
+                            <Button
+                                variant="contained"
+                                size="small"
+                                color="secondary"
+                                type="submit">
+                                Next
+                                <BsFillCaretRightFill />
+                            </Button>
                         </div>
                         <div className="prevButton">
                             <Button className="prevButton" variant="contained" size="small" color="secondary" onClick={() => goBack()}><BsFillCaretLeftFill />Prev</Button>

@@ -49,6 +49,8 @@ button {
 h1 {
   font-size: 30px;
   font-family: 'Spartan', sans-serif;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 h3 {
