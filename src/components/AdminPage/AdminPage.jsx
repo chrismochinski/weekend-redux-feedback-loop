@@ -6,6 +6,8 @@ import zIndex from '@mui/material/styles/zIndex';
 
 function AdminPage() {
 
+    
+
     let [feedbackArray, setFeedbackArray] = useState([]);
 
     useEffect(() => {
@@ -54,7 +56,7 @@ function AdminPage() {
                             <td>{feedback.comments}</td>
                             <td>{feedback.flagged ? 'Yes' : 'No'}</td>
                             <td><button id="flagButton">Flag</button></td>
-                            <td>{feedback.date}</td>
+                            <td>{new Date(feedback.date).toISOString().slice(0, 10).replace(`T`, ``)}</td>
                             <td><button id="deleteButton">Delete</button></td>
                         </tr>
                     ))}
