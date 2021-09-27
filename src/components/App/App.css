@@ -59,3 +59,18 @@ h3 {
   font-family: 'Spartan', sans-serif;
   color: rgba(0, 0, 0, 0.596);
 }
+
+/* admin only \/\/ */
+
+table.center {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  border: 1px black solid;
+}
+
+table, th, tr, td {
+  border: 1px black solid;
+  border-collapse: collapse;
+}
+

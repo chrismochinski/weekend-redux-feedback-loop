@@ -29,8 +29,8 @@ function AdminPage() {
 
     return (
         <div>
-
-            <table>
+            <h1 id="adminHeader">ADMIN</h1>
+            <table className="center">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -39,7 +39,9 @@ function AdminPage() {
                         <th>SUPPORT</th>
                         <th>COMMENTS</th>
                         <th>FLAGGED?</th>
+                        <th></th>
                         <th>DATE</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -50,8 +52,10 @@ function AdminPage() {
                             <td>{feedback.understanding}</td>
                             <td>{feedback.support}</td>
                             <td>{feedback.comments}</td>
-                            <td>{feedback.flagged}</td>
+                            <td>{feedback.flagged ? 'Yes' : 'No'}</td>
+                            <td><button id="flagButton">Flag</button></td>
                             <td>{feedback.date}</td>
+                            <td><button id="deleteButton">Delete</button></td>
                         </tr>
                     ))}
                 </tbody>
