@@ -31,7 +31,10 @@
 
 ## Installation
 ---
-- No particular installation steps are required.
+- Create a database using the provided .sql file (title the DB "prime_feedback")
+- Run `npm install` from the project root directory
+- Run `npm run server` to run the node server
+- In a separate terminal tab, run `npm run client` to launch the React app
 <br />
 
 ## Usage
