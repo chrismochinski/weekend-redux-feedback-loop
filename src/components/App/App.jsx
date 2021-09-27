@@ -7,9 +7,10 @@ import Header from '../Header/Header.jsx';
 import FeelingPage1 from '../FeelingPage1/FeelingPage1.jsx'
 import UnderstandingPage2 from '../UnderstandingPage2/UnderstandingPage2.jsx'
 import SupportPage3 from '../SupportPage3/SupportPage3.jsx';
-import CommentsPage4 from '../CommentsPage4/CommentsPage4.jsx'
-import ReviewPage5 from '../ReviewPage5/ReviewPage5.jsx'
-import ThankYouPage6 from '../ThankYouPage6/ThankYouPage6.jsx'
+import CommentsPage4 from '../CommentsPage4/CommentsPage4.jsx';
+import ReviewPage5 from '../ReviewPage5/ReviewPage5.jsx';
+import ThankYouPage6 from '../ThankYouPage6/ThankYouPage6.jsx';
+import AdminPage from '../AdminPage/AdminPage.jsx'
 
 
 
@@ -55,12 +56,13 @@ function App() {
           <ThankYouPage6 />
         </Route>
 
+        <Route path='/adminPage' exact>
+          <AdminPage />
+        </Route>
+
       </Router>
 
     </div>
-
-
-
 
 
 

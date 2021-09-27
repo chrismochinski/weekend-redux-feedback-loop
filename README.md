@@ -1,18 +1,26 @@
 # <b>Weekend Redux Feedback Loop ➰  </b><p> 
 
-### <b><span style="color:#F0ED86">Allows a user to report their daily prime feedback</b>
+## <b><span style="color:#F0ED86">Allows a user to report their daily prime feedback</b>
 <br />
 
 ---
 
 #### <span style="color: #9ED2F0">_Duration: Two-Day Sprint_</span><br />
 
-<p> This simple application allows a prime student to report their daily Prime Digital Academy feedback.</p>
+<p> This simple application allows a student to report their daily Prime Digital Academy feedback to their instructor(s).</p>
 
 
 ---
+<img src="./README-visuals/feedbackLoopChart.png" width="500px" style="float: left; margin-right: 10px"> <br /><br />_(this image represents the original, conceptual flow chart showing the path of information from the user's input to the Redux store as well as a backup object on the client side, both of which are used for temporary storage - the database is only utilized on user confirmation)_
+
+<br />
+
+---
+---
+
 
 ![gif during use](./README-visuals/feedbackDemo.gif)
+
 ---
 
 

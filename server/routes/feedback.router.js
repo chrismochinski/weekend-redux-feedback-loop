@@ -19,8 +19,16 @@ router.post('/', (req, res) => {
         });
 });
 
+//attempting GET route for fun
 router.get('/', (req, res) => {
-    res.send(pool);
+    let queryText = `SELECT * FROM "feedback" ORDER BY "date" LIMIT 10;`;
+    pool.query(queryText).then(result => {
+        res.send(result.rows)
+    })
+    .catch(error => {
+        console.log('error getting feedback:', error)
+        res.sendStatus(500);
+    })
 });
 
 
