@@ -21,15 +21,40 @@ router.post('/', (req, res) => {
 
 //attempting GET route for fun
 router.get('/', (req, res) => {
-    let queryText = `SELECT * FROM "feedback" ORDER BY "date" LIMIT 10;`;
+    let queryText = `SELECT * FROM "feedback" ORDER BY "id" LIMIT 10;`;
     pool.query(queryText).then(result => {
         res.send(result.rows)
     })
-    .catch(error => {
-        console.log('error getting feedback:', error)
-        res.sendStatus(500);
-    })
+        .catch(error => {
+            console.log('error getting feedback:', error)
+            res.sendStatus(500);
+        })
 });
 
+//put side to clean up...
+router.put('/:id', (req, res) => {
+    console.log('in PUT router side:', req.params);
+    const flagID = req.params.id;
+    const queryText = `UPDATE "feedback" SET "flagged" = NOT flagged WHERE "id" = $1;`; //I'm proud of figuring this one out!
+    pool.query(queryText, [flagID]).then((result) => {
+        res.sendStatus(200);
+    }).catch((error) => {
+        console.log('error in router-side PUT:', error);
+        res.sendStatus(500);
+    });
+});
+
+//attempting delete as well
+router.delete('/:id', (req, res) => {
+    console.log('in DELETE router-side:', req.params);
+    const deleteID = req.params.id;
+    const queryText = `DELETE FROM "feedback" WHERE "id" = $1;`;
+    pool.query(queryText, [deleteID]).then((result) => {
+        res.sendStatus(200);
+    }).catch((error) => {
+        console.log('error in DELETE router/server side:', error)
+        res.sendStatus(500);
+    });
+});
 
 module.exports = router;

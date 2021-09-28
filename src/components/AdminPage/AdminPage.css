@@ -1,0 +1,82 @@
+#deleteButton {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+#dateCell {
+   min-width: 90px;
+}
+
+#flagButtonCell {
+    min-width: 78px;
+}
+
+.no {
+    color: rgb(167, 167, 167);
+    padding: 8px;
+}
+
+.yes {
+    padding: 8px;
+    color: green;
+}
+
+#idCell {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+.one, .two {
+    background-color: rgba(255, 0, 0, 0.516);
+    font-style: italic;
+  }
+  
+  .three, .four {
+    background-color: rgba(255, 166, 0, 0.591);
+  }
+  
+  .five {
+    background-color: rgba(255, 255, 0, 0.536);
+  }
+  
+  .six, .seven {
+    background-color: rgba(0, 196, 0, 0.536);
+  }
+  
+  .eight, .nine {
+    background-color: #3396ff7c;
+  }
+  
+  .ten {
+    background-color: rgba(113, 69, 245, 0.582);
+    font-weight: bolder;
+    font-size: 18px;
+  }
+  
+  #here {
+      cursor: pointer;
+
+      text-decoration-line: underline;
+  }
+
+  #totalFeedback {
+      font-size: 25px;
+      color: rgb(210, 33, 183);
+      padding: 3px;
+  }
+
+
+  footer {
+    opacity: 50%;
+    text-align: center;
+    min-height: 100%;
+    min-height: -webkit-calc(100% - 186px);
+    min-height: -moz-calc(100% - 186px);
+    min-height: calc(100% - 186px);
+    width: 100%;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 90%;
+    color: black;
+  }
+    
