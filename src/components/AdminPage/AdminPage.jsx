@@ -187,7 +187,7 @@ function AdminPage() {
                     </tbody>
                 </table><br />
             </animated.div>
-            <animated.div style={propsFooter}>
+            {/* <animated.div style={propsFooter}>
             <h2>Thanks for checking out my Prime Feedback Project!</h2>
 
                 <footer>
@@ -196,7 +196,7 @@ function AdminPage() {
                     <p id="vsCodeAcknowledgement">Made with <a href="https://code.visualstudio.com/" target="_blank">VS Code</a> |
                         <a href="https://www.pixelmator.com/pro/" target="_blank">Pixelmator Pro</a></p>
                 </footer>
-            </animated.div>
+            </animated.div> */}
 
 
         </div>

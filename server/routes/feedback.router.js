@@ -21,7 +21,7 @@ router.post('/', (req, res) => {
 
 //attempting GET route for fun
 router.get('/', (req, res) => {
-    let queryText = `SELECT * FROM "feedback" ORDER BY "id" LIMIT 10;`;
+    let queryText = `SELECT * FROM "feedback" ORDER BY "id" LIMIT 200;`;
     pool.query(queryText).then(result => {
         res.send(result.rows)
     })
